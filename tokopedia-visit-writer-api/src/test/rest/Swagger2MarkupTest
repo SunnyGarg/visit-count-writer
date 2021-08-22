@@ -1,0 +1,37 @@
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = Application.class)
+@WebAppConfiguration
+@IntegrationTest
+public class Swagger2MarkupTest {
+
+    private static final String API_URI = "/v2/api-docs";
+
+    @Inject
+    private WebApplicationContext context;
+
+    private MockMvc mockMvc;
+
+    private File projectDir;
+
+    @Before
+    public void setup() throws IOException {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context).build();
+
+        ClassPathResource pathFileRes = new ClassPathResource("config/application.yml");
+        projectDir = pathFileRes.getFile().getParentFile().getParentFile().getParentFile().getParentFile();
+    }
+
+    @Test
+    public void convertSwaggerToAsciiDoc() throws Exception {
+        Swagger2MarkupResultHandler.Builder builder = Swagger2MarkupResultHandler
+            .outputDirectory(outputDirForFormat("asciidoc"));
+        mockMvc.perform(get(API_URI).accept(APPLICATION_JSON))
+            .andDo(builder.build())
+            .andExpect(status().isOk());
+
+    }
+
+    private String outputDirForFormat(String format) throws IOException {
+        return new File(projectDir, "target/docs/" + format + "/generated").getAbsolutePath();
+    }
+}

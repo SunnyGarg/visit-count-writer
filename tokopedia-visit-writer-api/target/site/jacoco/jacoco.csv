@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+tokopedia-visit-writer-api,com,TokopediaVisitWriterApplication,8,0,0,0,3,0,2,0,2,0
+tokopedia-visit-writer-api,com.adapter,RestAPIClientAdapter,83,0,12,0,15,0,9,0,3,0
+tokopedia-visit-writer-api,com.config,KafkaConfig,123,0,0,0,24,0,16,0,16,0
+tokopedia-visit-writer-api,com.config,RedisConfig,41,0,0,0,10,0,7,0,7,0
+tokopedia-visit-writer-api,com.config,BeanConfiguration,53,0,0,0,13,0,5,0,5,0
+tokopedia-visit-writer-api,com.service.impl,VisitManagementServiceImpl,40,0,0,0,11,0,2,0,2,0
+tokopedia-visit-writer-api,com.service.impl,VisitRequestListener,23,0,0,0,9,0,2,0,2,0
+tokopedia-visit-writer-api,com.service.impl,VisitWriterServiceImpl,52,0,2,0,11,0,3,0,2,0
+tokopedia-visit-writer-api,com.convertor,ModelConvertor,14,0,0,0,6,0,2,0,2,0
+tokopedia-visit-writer-api,com.resource.impl,VisitManagementResourceImpl,62,0,0,0,20,0,2,0,2,0

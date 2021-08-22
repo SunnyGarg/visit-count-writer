@@ -1,0 +1,12 @@
+com/utils/CommonUtils.class
+com/models/ServiceResponse.class
+com/utils/Constants.class
+com/models/ServiceResponse$ServiceResponseBuilder.class
+com/utils/ResourceValidator.class
+com/models/requests/CreateVisitRequest$CreateVisitRequestBuilder.class
+com/models/Visit.class
+com/models/Visit$VisitBuilder.class
+com/exceptions/TokopediaException.class
+com/utils/RestAPIClient.class
+com/utils/Constants$RESPONSE_STATUS.class
+com/models/requests/CreateVisitRequest.class
